@@ -19,6 +19,7 @@ ul{
 
 body{
     margin: 0;
+    margin-top: 70px;
 }
 .container{
     width: 90%;
@@ -37,16 +38,12 @@ header
     align-items: flex-start;
     padding-bottom: 10px;
     background-color: white;
-
-}
-.sticky {
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 999;
-    box-shadow: 0px 5px 5px -4px #00000024;
-  }
+    width: 1340px;
+    z-index: 1;
 
+}
 
 nav ul{
     display: flex;
@@ -87,6 +84,7 @@ h1{
     font-size:18px;
     font-weight: 700;
     margin-bottom: 5px;
+  
 }
 
 #search-form{
