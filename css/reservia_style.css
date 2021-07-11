@@ -38,12 +38,25 @@ header
     align-items: flex-start;
     padding-bottom: 10px;
     background-color: white;
+<<<<<<< HEAD
     position: fixed;
     top: 0;
     width: 1340px;
     z-index: 1;
 
 }
+=======
+
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0px 5px 5px -4px #00000024;
+  }
+
+>>>>>>> main
 
 nav ul{
     display: flex;
