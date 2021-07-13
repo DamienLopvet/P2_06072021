@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6, p, span, a{
     color: black;
 }
 p{
-    font-size: 0.8em;
+    font-size: 16px;
     font-weight: 500;
     margin-top: 0px;
 }
@@ -40,7 +40,8 @@ header
     background-color: white;
     position: fixed;
     top: 0;
-    width: 1340px;
+    max-width: 1340px;
+    width: 100%;
     z-index: 1;
 
 }
@@ -58,7 +59,7 @@ nav a{
     display: inline-block;
     text-decoration: none;
     color:  black;
-    font-size: 0.8em;
+    font-size: 16px;
     font-weight: 400;
     padding-top: 25px;
     padding-right: 10px;
@@ -133,6 +134,9 @@ h1{
 }
 #rq:focus::placeholder{
     color: transparent;
+}
+.mobile-icon{
+    display: none!important;
 }
 #submt_q{
     color:white;
@@ -447,4 +451,116 @@ footer li{
 }
 .bg-grey{
     background-color: #F2F2F2;
+}
+@media all and (max-width: 576px) {
+    body{
+        margin-top:0;
+    }
+    .container{
+        width: 100%;
+}
+    header {
+      display: block;   
+      width: 100%;
+      position: relative;
+}
+    .logo{
+        padding: 10px 0 0 20px;
+
+    }
+    .logo img{
+        max-width: 115px;
+    }
+    nav ul{
+        justify-content: center;
+    }
+    nav ul li:not(:last-child){
+        padding: 0 0 10px 0;
+        margin:0;
+        width:50%;
+        text-align: center;
+        
+    }
+    nav ul li:not(:last-child) a{
+        display: block;
+        padding-bottom: 20px;
+        border-bottom: 4px solid #F2F2F2;
+
+    }
+    nav ul li:not(:last-child) a:focus{
+        border-bottom: 4px solid #0065FC;
+    }
+    
+    nav ul li a, nav ul li a:focus {
+        border-top: none;
+    }
+    nav li:last-child{
+        border-bottom: none;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+    }
+    main{
+    padding-left: 20px;
+    padding-right: 20px;    }
+  
+h1{
+    font-size: 22px;
+}
+
+.mobile-icon{
+    display: block!important;
+    font-size: 16px;
+    }
+#submt_q{
+font-size: 0;   
+border-radius: 10px;
+vertical-align: 13px;
+margin-left: -13px;
+
+}
+.map-pin{
+    border-radius: 10px 0 0 10px;
+    font-size: 1em!important;
+    margin-right: -4px;
+    
+    line-height: 0.7em!important;
+    vertical-align: -0.06em!important;
+
+}
+#rq{
+    border: 1px solid #F2F2F2;
+    max-width: 230px;
+    padding: 10px 0 10px 10px;
+    font-size: 1em;
+}
+.filtres{
+position: relative;
+padding-top: 50px;
+display: flex;
+flex-flow:row wrap;
+
+}
+.filtres h3{
+    position:absolute;
+    top:0;
+    font-size: 1.1em;
+}
+.filtre-btn button{
+    font-size: 1em;
+
+}
+.flex{
+    flex-flow: column-reverse
+}
+.popular-choice{
+    border-radius: 0;
+    padding: 30px 15px 20px 15px;
+    max-width: 380px;
+    margin-bottom: 20px;
+}
+.popular-choice li{
+    border: 0.3em solid white;
+}
 }
