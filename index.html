@@ -63,7 +63,7 @@
         <input type="search" id="rq" placeholder="Marseille, France" />
         <button type="submit" class="" id="submt_q">Rechercher<i class="fa fa-search mobile-icon"></i></button> 
         </form>
-      <div class="filtres" id="hosting_choice">
+      <div class="filtres" >
         <div><h3>Filtres</h3></div>
         <div class="filtre-btn">
           <i class="fa fa-money-bill-wave"></i>
@@ -91,7 +91,7 @@
       <div class="flex">
         <section class="hosting-choice" role="presentation">
           
-          <h2>Hébergements à Marseille</h2>
+          <h2 id="hosting_choice">Hébergements à Marseille</h2>
           <ul>
             <li class="q1">
               <a href="#">
@@ -202,9 +202,10 @@
           </p>
         </section>
         <aside class="popular-choice" role="presentation">
+          <div class="popular-choice-title">
           <h2>Les plus populaires</h2>
-          <i class="fa fa-chart-line-up"></i>
-
+          <i class="fa fa-chart-line"></i>
+          </div>
           <ul>
             <li class="q2">
               <a href="#">
@@ -217,10 +218,11 @@
                 <div class="popular-info">
                   <h3>Hôtel Le soleil du matin</h3>
                   <p>Nuit à partir de <strong>128€</strong></p>
-
+                  <div class="popular-stars">
                   <i class="fa fa-star"></i><i class="fa fa-star"></i
                   ><i class="fa fa-star"></i><i class="fa fa-star"></i
                   ><i class="fa fa-star"></i>
+                  </div>
                 </div>
               </a>
             </li>
@@ -235,9 +237,11 @@
                 <div class="popular-info">
                   <h3>Au cœur de l'eau Chambre d'hôtes</h3>
                   <p>Nuit à partir de <strong>71€</strong></p>
+                  <div class="popular-stars">
                   <i class="fa fa-star"></i><i class="fa fa-star"></i
                   ><i class="fa fa-star"></i><i class="fa fa-star"></i
                   ><i class="fa fa-star"></i>
+                  </div>
                 </div>
               </a>
             </li>
@@ -252,13 +256,15 @@
                 <div class="popular-info">
                   <h3>Hôtel Tout bleu et Blanc</h3>
                   <p>Nuit à partir de <strong>68€</strong></p>
+                  <div class="popular-stars">
                   <i class="fa fa-star"></i><i class="fa fa-star"></i
                   ><i class="fa fa-star"></i><i class="fa fa-star"></i
                   ><i class="fa fa-star"></i>
+                  </div>
                 </div>
               </a>
             </li>
-          </ul>        <span id="activities"></span>
+          </ul>        
 
         </aside>
       </div>
@@ -266,11 +272,11 @@
 
       <section class="activities" role="presentation">     
       <h2>Actvités à Marseille</h2>
-
+      <span id="activities"></span>
         <ul>
           <li class="activitie-container">
           <a href="#">
-            <div class="activities-img-container">
+            <div class="activities-img-container mobile-fix">
               <img
                 src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg"
                 alt="Vieux Port"
@@ -315,7 +321,7 @@
         </li>
           <li class="activitie-container">
           <a href="#">
-            <div class="activities-img-container big">
+            <div class="activities-img-container big mobile-fix">
               <img
                 src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg"
                 alt="Notre-Dame-de-la-Garde"
@@ -380,29 +386,19 @@
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-      $(document).ready(function () {
-        // Add smooth scrolling to all links
-        $("a").on("click", function (event) {
-          // Make sure this.hash has a value before overriding default behavior
-          if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $("html, body").animate(
-              {
-                scrollTop: $(hash).offset().top,
-              },
-              800,
-              
-            );
-          } // End if
-        });
-      });
+     $('a[href*="#"]:not([href="#"])').click(function() {
+    var offset = -110; // <-- change the value here
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top + offset
+            }, 1000);
+            return false;
+        }
+    }
+});
     </script>
     
   </body>
