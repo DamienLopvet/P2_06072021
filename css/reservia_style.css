@@ -254,12 +254,12 @@ h1{
 .hosting-choice li{
     border-radius: 30px;
     background-color: white;
-    justify-content: space-around;
     margin: 15px 0;
     max-width: 225px;
     border: 0.35em solid white;
     overflow: hidden;
     box-shadow: 0px 0px 8px -3px #00000061;
+    flex-basis: 30%;
   }
 .hosting-choice li:hover{
     box-shadow:0px 5px 10px rgb(92 83 83 / 35%); /************TEST POUR GITKRAKEN**************/
@@ -324,7 +324,6 @@ font-size: 0.9em;
     background-color: #F2F2F2;
     border-radius: 30px;
     padding: 40px;
-    height: fit-content;
     flex: 1;
 }
 .popular-choice-title{
@@ -355,6 +354,7 @@ margin-bottom: 15px;
 }
 .popular-choice li:last-child{
     margin-bottom: 0px;
+    
     }
 
 .popular-choice li:hover{
@@ -466,6 +466,47 @@ footer li{
 .bg-grey{
     background-color: #F2F2F2;
 }
+@media all and (max-width: 1124px){
+    .flex{
+        flex-flow: column-reverse
+    }
+    .popular-choice ul{
+    flex-flow: row wrap;
+    justify-content: space-between;
+    }
+    .popular-choice li{
+        max-width: 408px;
+        flex-basis: 50%;
+    }
+    .popular-choice{
+        margin-bottom: 40px;
+        align-self:center;
+    }
+    .hosting-choice{
+        margin-right: 0;
+    }
+    .activities h2{
+        margin-left: 25px;
+    }
+    footer{
+        justify-content: space-between;
+    }
+}
+   
+@media all and (max-width: 1024px){
+    .popular-choice{
+        max-width: fit-content;
+    }
+    
+    .popular-choice ul{
+        flex-flow: column;
+        justify-content: center;
+    }
+    .activities ul{
+        justify-content: space-evenly;
+    }
+}
+    
 @media all and (max-width: 576px) {
     body{
         margin-top:0;
@@ -611,6 +652,9 @@ flex-flow:row wrap;
     margin-left: -20px;
     margin-right: -20px;
 }
+.popular-choice-title{
+    margin-right: 20px;
+}
 .popular-choice li{
     border: 0.3em solid white;
     max-width: none;
@@ -683,8 +727,6 @@ flex-flow: column;
     width: 100%;
 }
 
-.activities ul li:first-child img{
-}
 .activities ul li img{
     width: -webkit-fill-available;
 }
