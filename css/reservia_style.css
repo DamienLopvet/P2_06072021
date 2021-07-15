@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&display=swap');
 
 /* setup common rules */
-
+html{
+    scroll-behavior: smooth;
+}
 h1, h2, h3, h4, h5, h6, p, span, a{
     font-family: "Raleway", sans-serif;
     color: black;
@@ -77,16 +79,17 @@ nav a{
     padding-right: 10px;
     padding-left: 10px;
     border-top: 3px solid transparent;
-}
+    transition-duration: 0.6s;
 
-nav a:hover{
-    color:#0065FC;
-    -webkit-transition-duration: 0.6s;
 }
 nav a:focus{
-    color:#0065FC;
-    border-top: 3px solid;
+    border-top:3px solid #0065FC;
+
 }
+nav a:hover{
+    color:#0065FC;
+}
+
 
 #register
 {
@@ -95,9 +98,8 @@ nav a:focus{
 /*setup search bar  */
 #search_form{
     border: 1px solid #F2F2F2;
-    display: block;
+    display: inline-block;
     border-radius: 16px;
-    width: fit-content;
 }
 
 .map-pin{
@@ -107,7 +109,9 @@ nav a:focus{
     margin: -1px;
     font-size: 0.9em!important;
 }
-
+::placeholder { 
+    color: black;
+  }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: black;
   }
@@ -127,9 +131,13 @@ nav a:focus{
     outline: none;
 
 }
+#request_field::placeholder{
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s; 
+
+}
 #request_field:hover::placeholder{
     opacity: 20%;
-    -webkit-transition-duration: 0.4s;
 }
 #request_field:focus::placeholder{
     color: transparent;
@@ -146,8 +154,6 @@ nav a:focus{
     font-weight: 600;
     border: none;
     margin:-1px;
-    -webkit-transition: background-color 0.5s ease-in-out;
-    -moz-transition: background-color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
     }
 #submt_request:hover{
@@ -170,8 +176,6 @@ nav a:focus{
     border: 1px solid #ddd;
     border-radius: 250px;
     padding: 0px 15px 0 0;
-    -webkit-transition: background-color 0.5s ease-in-out;
-    -moz-transition: background-color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
 }
 
@@ -241,7 +245,8 @@ nav a:focus{
     padding: 40px;
    }
 .hosting-choice h2{
-    margin: 5px 0 10px 0;
+    margin: -100px 0 10px 0;
+    padding-top: 105px;
 }
 
 .hosting-choice ul{
@@ -258,10 +263,12 @@ nav a:focus{
     overflow: hidden;
     box-shadow: 0px 0px 8px -3px #00000061;
     flex-basis: 30%;
+    transition-duration: 0.6s;
+
   }
 .hosting-choice li:hover{
     box-shadow:0px 5px 10px rgb(92 83 83 / 35%); /************TEST POUR GITKRAKEN**************/
-    -webkit-transition-duration: 0.6s;
+    
 }
 
 .hosting-choice img{
@@ -311,11 +318,11 @@ font-size: 0.9em;
     display: block;
     margin-top: 20px;
     width: fit-content;
+    transition-duration: 0.6s;
 
 }
 .view-more:hover{
     color: #0065FC;
-    -webkit-transition-duration: 0.6s;
 }
 
 .popular-choice{
@@ -349,6 +356,8 @@ margin-bottom: 15px;
     border: 0.35em solid white;
     overflow: hidden;
     box-shadow: 0px 0px 8px -3px #00000061;
+    transition-duration: 0.6s;
+
 }
 .popular-choice li:last-child{
     margin-bottom: 0px;
@@ -357,7 +366,6 @@ margin-bottom: 15px;
 
 .popular-choice li:hover{
     box-shadow: 0px 5px 10px rgb(92 83 83 / 35%);
-    -webkit-transition-duration: 0.6s;
 }
 .popular-choice a{
     text-decoration: none;
@@ -395,7 +403,8 @@ margin-bottom: 15px;
 
 /* setup activities proposal */
 .activities h2{
-    margin-top: 40px;
+    margin-top: -50px;
+    padding-top: 90px;
 }
 .activities ul{
     display: flex;
@@ -411,16 +420,16 @@ margin-bottom: 15px;
     max-width: 290px;
     box-shadow: 0px 0px 8px -3px #00000061;
     text-decoration: none;
+    transition-duration: 0.6s;
 
 
 }
 .activitie-container a:hover{
     box-shadow: 0px 5px 10px rgb(92 83 83 / 35%);
-    -webkit-transition-duration: 0.6s;
 }
 
 .activitie-container h3{
-    font-size: 1em;
+    font-size: 0.9em;
     margin: 20px;
 }
 .activities-img-container{
@@ -428,13 +437,17 @@ margin-bottom: 15px;
     position: relative;
     height: 390px;
     min-width: 300px;
-
 }
+
 .activities-img-container img{
     position: absolute;
     margin: auto;
     top: 0;
     bottom: 0;
+}
+.activities ul li:nth-child(4) a:first-child img{
+    bottom:auto;
+    right: -70px
 }
 .big{
     height: 170px;
@@ -460,9 +473,14 @@ footer div{
 
 footer a{
     text-decoration: none;
+    transition-duration: 0.6s;
+
 }
 footer li{
     padding-bottom: 10px;
+}
+footer  a:hover{
+    color: #0065FC;
 }
 .bg-grey{
     background-color: #F2F2F2;
@@ -585,22 +603,34 @@ p{
 #submt_request{
 font-size: 0;   
 border-radius: 10px;
-vertical-align: 17px;
+vertical-align: 18px;
 margin-left: -14px;
-padding:10px;
+padding:12px;
 
 }
 .map-pin{
     border-radius: 10px 0 0 10px;
     font-size: 1em!important;
     margin-right: -6px;
-    
     line-height: 0.9em!important;
     vertical-align: 0.0001em!important;
 
 }
+@-moz-document url-prefix() {
+.map-pin{
+    line-height: 1.1em !important;
+    vertical-align: 0.1em !important;
+    }
+#submt_request{
+    vertical-align: 0;
+    }
+.count-result i{
+    font-size: 0.8em!important;
+}
+}
+
+
 #request_field{
-    border: 1px solid #F2F2F2;
     max-width: 230px;
     padding: 12px 0 10px 12px;
     font-size: 1em;
@@ -682,7 +712,7 @@ flex-flow:row wrap;
 }
 
 .image-portrait-center{
-    width: -webkit-fill-available;
+    width: 100%;
 }
 
 .hosting-choice{
@@ -735,6 +765,9 @@ flex-flow: column;
 .activities ul li img{
     width: -webkit-fill-available;
 }
+.activities ul li:nth-child(4) a:first-child img {
+    right: 0;
+}
 
 .popular-info i, .info i{
     font-size: 14px;
@@ -744,7 +777,7 @@ flex-flow: column;
 }
 footer{
     flex-direction: column;
-    padding: 0 20px 0 20px;
+    padding: 20px 20px 0 20px;
 }
 footer div{
     min-width:260px;

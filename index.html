@@ -3,6 +3,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place this data between the <head> tags of your website -->
 <meta name="description" content="Résultats de recherche pour se loger à Marseille " />
@@ -304,9 +305,9 @@
       
       <!-- setup  activities cards -->
 
-      <section class="activities" role="presentation">     
+      <section class="activities" id="activities" role="presentation">     
       <h2>Actvités à Marseille</h2>
-      <span id="activities"></span>
+    
         <ul>
           <li class="activitie-container">
           <a href="#">
@@ -420,23 +421,6 @@
         </div>
       </footer>
     </div>
-    
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-     $('a[href*="#"]:not([href="#"])').click(function() {
-    var offset = -110; // <-- change the value here
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-            $('html, body').animate({
-                scrollTop: target.offset().top + offset
-            }, 1000);
-            return false;
-        }
-    }
-});
-    </script>-->
-    
+      
   </body>
 </html>
