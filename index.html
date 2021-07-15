@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+<!-- setup html basis -->
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place this data between the <head> tags of your website -->
 <meta name="description" content="Résultats de recherche pour se loger à Marseille " />
+
+<!-- setup social-medias content -->
 
 <!-- Twitter Card data -->
 <meta name="twitter:site" content="@Reservia" />
@@ -17,8 +20,14 @@
 <meta property="og:url" content="http://www.resrevia.com?hébergement=Marseille/" />
 <meta property="og:image" content="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" />
 <meta property="og:description" content="Résultats de recherche pour se loger à Marseille" />
-    <link rel="stylesheet" href="css/reservia_style.css" />
-    <link
+    
+<!-- setup css stylesheet url -->
+
+<link rel="stylesheet" href="css/reservia_style.css" />
+
+<!-- setup fontawesome api -->
+
+<link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
@@ -29,6 +38,7 @@
   </head>
   <body>
     
+  <!-- setup header -->
     <div class="container">
       
         <header>
@@ -40,6 +50,9 @@
 
           <nav>
             <ul>
+
+<!-- setup anchors -->
+
               <li><a href="#hosting_choice">Hébergements</a></li>
               <li><a href="#activities">Actvités</a></li>
               <li>
@@ -50,6 +63,8 @@
         </header>
     </div>
     
+
+
     <div class="container ">
 
       <main>
@@ -58,11 +73,17 @@
         <p>En plein centre ville ou en pleine nature</p>
       </div>
 
+<!-- setup request form-->
+
+
       <form action="" method="POST" id="search_form">
         <i class="fa fa-map-marker-alt fa-lg map-pin"></i>
-        <input type="search" id="rq" placeholder="Marseille, France" />
-        <button type="submit" class="" id="submt_q">Rechercher<i class="fa fa-search mobile-icon"></i></button> 
+        <input type="search" id="request_field" placeholder="Marseille, France" />
+        <button type="submit" class="" id="submt_request">Rechercher<i class="fa fa-search mobile-icon"></i></button> 
         </form>
+
+<!-- setup filters -->
+
       <div class="filtres" >
         <div><h3>Filtres</h3></div>
         <div class="filtre-btn">
@@ -83,12 +104,21 @@
           <button>Animaux autorisés</button>
         </div>
       </div>
+
+<!-- setup number number of hosts available-->
+
       <div class="count-result">
       <i class="fa fa-info info-icon"> </i>
       <p>
         Plus de <span>500</span> logements sont disponibles dans cette ville
       </p></div>
+
+<!-- setup  cards -->
+
       <div class="flex">
+
+<!-- setup  hosting choice cards -->
+
         <section class="hosting-choice" role="presentation">
           
           <h2 id="hosting_choice">Hébergements à Marseille</h2>
@@ -201,6 +231,9 @@
             <a href="#" class="view-more">Afficher plus</a>
           </p>
         </section>
+
+<!-- setup  popular choice cards -->
+
         <aside class="popular-choice" role="presentation">
           <div class="popular-choice-title">
           <h2>Les plus populaires</h2>
@@ -269,6 +302,7 @@
         </aside>
       </div>
       
+      <!-- setup  activities cards -->
 
       <section class="activities" role="presentation">     
       <h2>Actvités à Marseille</h2>
@@ -343,6 +377,9 @@
       </section>
       </main>
     </div>
+
+    <!-- setup  footer -->
+
     <div class="bg-grey">
       <footer>
         <div>
@@ -384,7 +421,7 @@
       </footer>
     </div>
     
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
      $('a[href*="#"]:not([href="#"])').click(function() {
     var offset = -110; // <-- change the value here
@@ -399,7 +436,7 @@
         }
     }
 });
-    </script>
+    </script>-->
     
   </body>
 </html>

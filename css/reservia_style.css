@@ -1,9 +1,19 @@
-<!--   -->
+/*import font from google font api */
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700;900&display=swap');
+
+/* setup common rules */
+
 h1, h2, h3, h4, h5, h6, p, span, a{
     font-family: "Raleway", sans-serif;
     color: black;
 }
+h1{
+    font-size:18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  
+}
+
 p{
     font-size: 16px;
     font-weight: 500;
@@ -16,16 +26,18 @@ ul{
     padding: 0;
 
 }
-
+/* setting fix position menu offset */
 body{
     margin: 0;
     margin-top: 70px;
 }
+/* */
 .container{
     width: 90%;
     max-width: 1340px;
     margin: auto;
 }
+/* setup header for desktop */
 .logo img
 {
     max-width: 75px;
@@ -80,18 +92,10 @@ nav a:focus{
 {
     color: #0065FC;
 }
-
-h1{
-    font-size:18px;
-    font-weight: 700;
-    margin-bottom: 5px;
-  
-}
-
-#search-form{
+/*setup search bar  */
+#search_form{
     border: 1px solid #F2F2F2;
     display: block;
-    padding: inherit;
     border-radius: 16px;
     width: fit-content;
 }
@@ -110,35 +114,30 @@ h1{
   ::-moz-placeholder { /* Firefox 19+ */
     color: black;
   }
-  :-ms-input-placeholder { /* IE 10+ */
-    color: black;
-  }
-  :-moz-placeholder { /* Firefox 18- */
-    color: black;
-  }
+  
 
-#rq{
+#request_field{
     font-size: 0.9em;
     padding: 11px 0 11px 10px;
     font-weight: 600;
     border: none;
-    max-width: 150px;
+    max-width: 200px;
 }
-#rq:focus{
+#request_field:focus{
     outline: none;
 
 }
-#rq:hover::placeholder{
+#request_field:hover::placeholder{
     opacity: 20%;
     -webkit-transition-duration: 0.4s;
 }
-#rq:focus::placeholder{
+#request_field:focus::placeholder{
     color: transparent;
 }
 .mobile-icon{
     display: none!important;
 }
-#submt_q{
+#submt_request{
     color:white;
     background-color: #0065FC;
     font-size: 0.9em;
@@ -149,14 +148,13 @@ h1{
     margin:-1px;
     -webkit-transition: background-color 0.5s ease-in-out;
     -moz-transition: background-color 0.5s ease-in-out;
-    -ms-transition: background-color 0.5s ease-in-out;
-    -o-transition: background-color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
     }
-#submt_q:hover{
+#submt_request:hover{
     background-color: #F2F2F2;
     color: #0065FC;
 }
+/* setup filters section */
 .filtres{
     padding: 15px 0;
 }
@@ -174,8 +172,6 @@ h1{
     padding: 0px 15px 0 0;
     -webkit-transition: background-color 0.5s ease-in-out;
     -moz-transition: background-color 0.5s ease-in-out;
-    -ms-transition: background-color 0.5s ease-in-out;
-    -o-transition: background-color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
 }
 
@@ -208,6 +204,7 @@ h1{
     color:#0065FC;
 
 }
+/* setup appearence of the request number of hosts results */
 .info-icon{
    border: 1px solid #ddd;
    border-radius: 250px;
@@ -230,6 +227,7 @@ h1{
 .count-result p{
     margin-bottom: 0;
 }
+/* setup hosts proposal */
 .flex{
     display: flex;
     flex-flow: row wrap;
@@ -394,6 +392,8 @@ margin-bottom: 15px;
 .popular-info H3{
     font-size: 1em;
 }
+
+/* setup activities proposal */
 .activities h2{
     margin-top: 40px;
 }
@@ -442,6 +442,7 @@ margin-bottom: 15px;
 .stretch{
     height: 130px;
 }
+/* setup footer */
 footer{
     background-color: #F2F2F2;
     margin: auto;
@@ -466,6 +467,9 @@ footer li{
 .bg-grey{
     background-color: #F2F2F2;
 }
+
+/* setup media queries */
+
 @media all and (max-width: 1124px){
     .flex{
         flex-flow: column-reverse
@@ -578,7 +582,7 @@ p{
     display: block!important;
     font-size: 22px;
     }
-#submt_q{
+#submt_request{
 font-size: 0;   
 border-radius: 10px;
 vertical-align: 17px;
@@ -595,7 +599,7 @@ padding:10px;
     vertical-align: 0.0001em!important;
 
 }
-#rq{
+#request_field{
     border: 1px solid #F2F2F2;
     max-width: 230px;
     padding: 12px 0 10px 12px;
@@ -645,6 +649,7 @@ flex-flow:row wrap;
 .flex{
     flex-flow: column-reverse
 }
+
 .popular-choice{
     border-radius: 0;
     padding: 30px 20px 35px 20px;
