@@ -43,6 +43,9 @@ ul{
 .deep-blue{
     color: #0065FC;
 }
+.dwn-size{
+    font-size: 0.9em;
+}
 .container{
     width: 90%;
     max-width: 1340px;
@@ -135,7 +138,6 @@ nav a:hover{
   
 
 #request_field{
-    font-size: 0.9em;
     padding: 11px 0 11px 10px;
     font-weight: 600;
     border: none;
@@ -167,7 +169,7 @@ nav a:hover{
 #submt_request{
     color:white;
     background-color: #0065FC;
-    font-size: 0.9em;
+    ;
     padding: 12px;
     border-radius: 0 16px 16px 0;
     font-weight: 600;
@@ -189,7 +191,7 @@ nav a:hover{
     display: inline-block;
 }
 .filtres h3{
-    font-size: 0.9em;
+    ;
     padding-right: 10px;
 }
 .filtre-btn{
@@ -326,10 +328,6 @@ margin: 5px 0;
     margin: 5px 0 10px 0;
 }
 
-.info i{
-
-font-size: 0.9em;
-}
 .unset-star{
     color:#F2F2F2!important;
 }
@@ -445,7 +443,6 @@ margin-bottom: 15px;
 }
 
 .activitie-container h3{
-    font-size: 0.9em;
     margin: 20px;
 }
 .activities-img-container{
@@ -489,8 +486,6 @@ footer div{
 
 footer a{
     text-decoration: none;
-
-
 }
 footer li{
     padding-bottom: 10px;
