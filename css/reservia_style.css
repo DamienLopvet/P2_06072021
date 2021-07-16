@@ -15,9 +15,12 @@ h1{
     margin-bottom: 5px;
   
 }
+h3{
+    font-size: 16px;
+}
 
 p{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     margin-top: 0px;
 }
@@ -28,18 +31,31 @@ ul{
     padding: 0;
 
 }
-/* setting fix position menu offset */
-body{
-    margin: 0;
-    margin-top: 70px;
+.transition{
+    transition-duration: 0.6s;
 }
-/* */
+.transition-bckgrd-color{
+    transition: background-color 0.5s ease-in-out;
+}
+.shade{
+    box-shadow: 0px 0px 8px -3px #00000061;
+}
 .container{
     width: 90%;
     max-width: 1340px;
     margin: auto;
 }
+
+/* setup fix-position menu offset */
+
+body{
+    margin: 0;
+    margin-top: 70px;
+}
+
+
 /* setup header for desktop */
+
 .logo img
 {
     max-width: 75px;
@@ -62,7 +78,7 @@ header
 
 nav ul{
     display: flex;
-  }
+}
 
 nav li{
     margin-left: 25px;
@@ -79,8 +95,6 @@ nav a{
     padding-right: 10px;
     padding-left: 10px;
     border-top: 3px solid transparent;
-    transition-duration: 0.6s;
-
 }
 nav a:focus{
     border-top:3px solid #0065FC;
@@ -95,7 +109,9 @@ nav a:hover{
 {
     color: #0065FC;
 }
-/*setup search bar  */
+
+/*setup search form  */
+
 #search_form{
     border: 1px solid #F2F2F2;
     display: inline-block;
@@ -109,6 +125,7 @@ nav a:hover{
     margin: -1px;
     font-size: 0.9em!important;
 }
+
 ::placeholder { 
     color: black;
   }
@@ -138,9 +155,14 @@ nav a:hover{
 }
 #request_field:hover::placeholder{
     opacity: 20%;
+    -moz-transition-duration: 0.4s; 
+
 }
+
 #request_field:focus::placeholder{
-    color: transparent;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s ease-in-out;
+    transition: opacity 0.35s ease-in-out;
 }
 .mobile-icon{
     display: none!important;
@@ -154,13 +176,15 @@ nav a:hover{
     font-weight: 600;
     border: none;
     margin:-1px;
-    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
     }
 #submt_request:hover{
     background-color: #F2F2F2;
     color: #0065FC;
 }
+
 /* setup filters section */
+
 .filtres{
     padding: 15px 0;
 }
@@ -176,11 +200,10 @@ nav a:hover{
     border: 1px solid #ddd;
     border-radius: 250px;
     padding: 0px 15px 0 0;
-    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .filtre-btn:hover{
-
     border-color: #DEEBFF;
     background-color: #DEEBFF;
 }
@@ -208,7 +231,9 @@ nav a:hover{
     color:#0065FC;
 
 }
+
 /* setup appearence of the request number of hosts results */
+
 .info-icon{
    border: 1px solid #ddd;
    border-radius: 250px;
@@ -231,7 +256,9 @@ nav a:hover{
 .count-result p{
     margin-bottom: 0;
 }
+
 /* setup hosts proposal */
+
 .flex{
     display: flex;
     flex-flow: row wrap;
@@ -261,9 +288,9 @@ nav a:hover{
     max-width: 225px;
     border: 0.35em solid white;
     overflow: hidden;
-    box-shadow: 0px 0px 8px -3px #00000061;
+
     flex-basis: 30%;
-    transition-duration: 0.6s;
+
 
   }
 .hosting-choice li:hover{
@@ -293,7 +320,6 @@ nav a:hover{
     margin: 10px;
 }
 .info h3{
-font-size: 1em;
 margin: 5px 0;
 
 }
@@ -301,8 +327,6 @@ margin: 5px 0;
 .info p{
     font-weight: 500;
     margin: 5px 0 10px 0;
-    font-size: 90%;
-
 }
 
 .info i{
@@ -318,7 +342,7 @@ font-size: 0.9em;
     display: block;
     margin-top: 20px;
     width: fit-content;
-    transition-duration: 0.6s;
+
 
 }
 .view-more:hover{
@@ -355,8 +379,8 @@ margin-bottom: 15px;
     margin: 0 0 25px 0;
     border: 0.35em solid white;
     overflow: hidden;
-    box-shadow: 0px 0px 8px -3px #00000061;
-    transition-duration: 0.6s;
+
+
 
 }
 .popular-choice li:last-child{
@@ -397,11 +421,10 @@ margin-bottom: 15px;
 .popular-info i{
     color: #0065FC;
 }
-.popular-info H3{
-    font-size: 1em;
-}
+
 
 /* setup activities proposal */
+
 .activities h2{
     margin-top: -50px;
     padding-top: 90px;
@@ -418,9 +441,9 @@ margin-bottom: 15px;
     overflow: hidden;
     margin-bottom: 30px;
     max-width: 290px;
-    box-shadow: 0px 0px 8px -3px #00000061;
+
     text-decoration: none;
-    transition-duration: 0.6s;
+
 
 
 }
@@ -473,7 +496,7 @@ footer div{
 
 footer a{
     text-decoration: none;
-    transition-duration: 0.6s;
+
 
 }
 footer li{
@@ -585,17 +608,6 @@ footer  a:hover{
 h1{
     font-size: 22px;
 }
-h2{
-    font-size: 24px;
-}
-h3{
-    font-size: 16px!important;
-}
-p{
-    font-size: 15px!important;
-}
-
-
 .mobile-icon{
     display: block!important;
     font-size: 22px;
@@ -783,7 +795,6 @@ footer div{
     min-width:260px;
 }
 footer h3{
-    font-size: 16px!important;
     margin-bottom: 7px;
 }
 footer ul{
