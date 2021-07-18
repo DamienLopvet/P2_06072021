@@ -3,6 +3,7 @@
 
 /* setup common rules */
 html{
+    scroll-padding: 58px;
     scroll-behavior: smooth;
 }
 h1, h2, h3, h4, h5, h6, p, span, a{
@@ -191,7 +192,6 @@ nav a:hover{
     display: inline-block;
 }
 .filtres h3{
-    ;
     padding-right: 10px;
 }
 .filtre-btn{
@@ -271,8 +271,9 @@ nav a:hover{
     padding: 40px;
    }
 .hosting-choice h2{
-    margin: -100px 0 10px 0;
-    padding-top: 105px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+   
 }
 
 .hosting-choice ul{
@@ -417,8 +418,7 @@ margin-bottom: 15px;
 /* setup activities proposal */
 
 .activities h2{
-    margin-top: -50px;
-    padding-top: 90px;
+    padding-top: 20px;
 }
 .activities ul{
     display: flex;
@@ -541,6 +541,10 @@ footer  a:hover{
 }
     
 @media all and (max-width: 576px) {
+    html{
+        scroll-padding: 0 ;
+    }
+    
     body{
         margin-top:0;
     }
