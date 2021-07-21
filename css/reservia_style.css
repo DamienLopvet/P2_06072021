@@ -103,12 +103,14 @@ nav a{
     padding-left: 10px;
     border-top: 3px solid transparent;
 }
-nav a:focus{
+nav a:last-child:focus{
     border-top:3px solid #0065FC;
 
 }
 nav a:hover{
     color:#0065FC;
+    border-top:3px solid #0065FC;
+
 }
 
 /*setup search form  */
@@ -648,7 +650,7 @@ flex-flow:row wrap;
 }
 .filtres h3{
     position:absolute;
-    top: 15px;
+    top: 0px;
     font-size: 1.1em;
 }
 .filtre-btn button{
