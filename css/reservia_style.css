@@ -581,10 +581,16 @@ footer  a:hover{
         border-bottom: 4px solid #F2F2F2;
 
     }
-    nav ul li:not(:last-child) a:focus{
+    nav ul li:not(:last-child) a:hover{
         border-bottom: 4px solid #0065FC;
+
     }
-    
+    nav a:last-child:focus {
+        border-top: none;}
+
+    nav a:hover{
+        border-top: none;
+    }
     nav ul li a, nav ul li a:focus {
         border-top: none;
     }
