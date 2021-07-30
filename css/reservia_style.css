@@ -190,7 +190,7 @@ nav a:hover{
 .filtres{
     padding: 15px 0;
 }
-.filtres >div{
+.filtres > div{
     display: inline-block;
 }
 .filtres h3{
